@@ -1,0 +1,14 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+df = pd.read_csv('C:\\Users\\Ольга\\Downloads\\2019.csv')
+df
+
+df = df.rename(columns={'Country or region': 'Country'})
+
+top_countries = df[['Country', 'Score']].groupby(by='Country').sum().sort_values(by='Score', ascending=False).head(10)
+ax = top_countries.plot(kind='barh'),plt.xlabel('Оценка'),plt.title('Топ стран по уровню счастья')
+plt.xlim(7.2, 7.8)
+ax
+
+
+
