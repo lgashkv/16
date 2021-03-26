@@ -11,4 +11,15 @@ plt.xlim(7.2, 7.8)
 ax
 
 
+df_all = df[['Country', 'GDP per capita', 'Social support','Healthy life expectancy', 'Freedom to make life choices','Generosity','Perceptions of corruption']].head(15)
+df_all.plot(kind='area', stacked=False)
+plt.xlabel('Страна')
+plt.ylabel('Оценка')
+plt.title('Оценка категорий по уровню счастья',fontdict={'size':12})
+plt.plot(df_all.Country,df_all.Generosity)
+plt.xticks(rotation=60, horizontalalignment='right', fontsize=10)
+
+
+
+
 
