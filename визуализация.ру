@@ -19,6 +19,9 @@ plt.title('Оценка категорий по уровню счастья',fon
 plt.plot(df_all.Country,df_all.Generosity)
 plt.xticks(rotation=60, horizontalalignment='right', fontsize=10)
 
+max_values = df_all[['GDP per capita','Social support','Healthy life expectancy','Freedom to make life choices','Generosity','Perceptions of corruption']].mean()
+ax = max_values.plot(kind='pie'),plt.title('Средняя оценка по категориям')
+ax
 
 
 
