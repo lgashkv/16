@@ -23,6 +23,10 @@ max_values = df_all[['GDP per capita','Social support','Healthy life expectancy'
 ax = max_values.plot(kind='pie'),plt.title('Средняя оценка по категориям')
 ax
 
+maximum = df_all[['GDP per capita','Social support','Healthy life expectancy','Freedom to make life choices','Generosity','Perceptions of corruption']].max()
+maximum
+# Я бы хотела чтобы перед максимум стояла страна. Но мне не удалось этого добиться. То есть должно быть 6 строк максимум по оценкам, а перед ними страна, которая дала эту оценку.
+
 
 
 
